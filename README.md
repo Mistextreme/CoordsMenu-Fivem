@@ -18,7 +18,7 @@ Ce script Coords Menu est un utilitaire simple pour afficher et gérer les coord
 
 🔹 Personnalisation des raccourcis et de l'affichage
 
-📌 Installation
+📌 **Installation**
 
 Télécharger le script
 
@@ -26,4 +26,4 @@ Ajouter le dossier dans resources
 
 Ajouter start coordsMenu dans le server.cfg
 
-🛠️ Ce projet est ouvert aux suggestions et contributions ! N'hésitez pas à proposer des améliorations.
+🛠️ Ce projet est **ouvert aux suggestions et contributions** ! N'hésitez pas à proposer des **améliorations**.
