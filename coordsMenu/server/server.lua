@@ -1,4 +1,4 @@
-print("^1[CoordsMenu]^7 Cette ressource a été créée par #dayzzzzzzzzz.")
+print("^1[CoordsMenu]^7 Este recurso foi criado por #dayzzzzzzzzz.")
 
 ESX.RegisterServerCallback('dayz:getGroupPlayer', function(src, cb)
     local xPlayer = ESX.GetPlayerFromId(src)
