@@ -11,11 +11,11 @@ RegisterCommand(Config_commandeName, function(source, args, rawCommand)
     if hasAccess then
         openMenuCoords()
     else
-        createNotification("Vous n'avez pas accès à ce menu", "error", 3000)
+        createNotification("Você não tem acesso a este menu", "error", 3000)
     end
 end, false)
 
-RegisterKeyMapping(Config_commandeName, "Ouvrir le menu", "keyboard", Config_keysOpenMenu)
+RegisterKeyMapping(Config_commandeName, "Abrir menu", "keyboard", Config_keysOpenMenu)
 
 
 
