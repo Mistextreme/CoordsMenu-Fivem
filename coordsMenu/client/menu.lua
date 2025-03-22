@@ -1,5 +1,5 @@
 local menuState = false
-local menuCoords = RageUI.CreateMenu(Config_titlemenu, Config_subtile, 0, 0, Config_TextureDictionary, Config_TextureName)
+local menuCoords = RageUI.CreateMenu(Config_titlemenu, Config_subtitle, 0, 0, Config_TextureDictionary, Config_TextureName)
 
 menuCoords.Closed = function ()
     menuState = false
@@ -18,12 +18,11 @@ function openMenuCoords()
         while menuState do
             RageUI.IsVisible(menuCoords, function()
 
-                
-                RageUI.Separator("Copier des "..Config_mainColor.."coordonnés~s~, et plus "..Config_mainColor.."encores~")
+                RageUI.Separator("Copy "..Config_mainColor.."coordinates~s~, and more "..Config_mainColor.."options~")
 
                 RageUI.Line()
 
-                RageUI.Button("Copier le vector2", nil, {RightLabel = Config_RightLabel}, true, {
+                RageUI.Button("Copy vector2", nil, {RightLabel = Config_RightLabel}, true, {
                     onSelected = function ()
                         getCoordsPlayer()
                         SendNUIMessage({
@@ -31,12 +30,11 @@ function openMenuCoords()
                             data = "vector2("..getCoordsPlayer().x..", "..getCoordsPlayer().y..")"
                         })
                         print("vector2("..getCoordsPlayer().x..", "..getCoordsPlayer().y..")")
-                        createNotification("Vous avez copier avez succes la valeur elle est dans votre console F8 ou dans le presse papier", "success", 2500)
+                        createNotification("Successfully copied the value, it is in your F8 console or clipboard", "success", 2500)
                     end
                 })
-                
 
-                RageUI.Button("Copier le vector3", nil, {RightLabel = Config_RightLabel}, true, {
+                RageUI.Button("Copy vector3", nil, {RightLabel = Config_RightLabel}, true, {
                     onSelected = function ()
                         getCoordsPlayer()
                         SendNUIMessage({
@@ -44,11 +42,11 @@ function openMenuCoords()
                             data = ""..getCoordsPlayer()
                         })
                         print(getCoordsPlayer())
-                        createNotification("Vous avez copier avez succes la valeur elle est dans votre console F8 ou dans le presse papier", "success", 2500)
+                        createNotification("Successfully copied the value, it is in your F8 console or clipboard", "success", 2500)
                     end
                 })
 
-                RageUI.Button("Copier le vector4", nil, {RightLabel = Config_RightLabel}, true, {
+                RageUI.Button("Copy vector4", nil, {RightLabel = Config_RightLabel}, true, {
                     onSelected = function ()
                         getPlayerHanding()
                         getCoordsPlayer()
@@ -57,13 +55,13 @@ function openMenuCoords()
                             data = "vector4("..getCoordsPlayer().x..", "..getCoordsPlayer().y..", "..getCoordsPlayer().z..", "..getPlayerHanding()..")"
                         })
                         print("vector4("..getCoordsPlayer().x..", "..getCoordsPlayer().y..", "..getCoordsPlayer().z..", "..getPlayerHanding()..")")
-                        createNotification("Vous avez copier avez succes la valeur elle est dans votre console F8 ou dans le presse papier", "success", 2500)
+                        createNotification("Successfully copied the value, it is in your F8 console or clipboard", "success", 2500)
                     end
                 })
 
                 RageUI.Line()
 
-                RageUI.Button("Copier X, Y", nil, {RightLabel = Config_RightLabel}, true, {
+                RageUI.Button("Copy X, Y", nil, {RightLabel = Config_RightLabel}, true, {
                     onSelected = function ()
                         getCoordsPlayer()
                         SendNUIMessage({
@@ -71,11 +69,11 @@ function openMenuCoords()
                             data = "X = "..getCoordsPlayer().x..", Y = "..getCoordsPlayer().y
                         })
                         print("X = "..getCoordsPlayer().x..", Y = "..getCoordsPlayer().y)
-                        createNotification("Vous avez copier avez succes la valeur elle est dans votre console F8 ou dans le presse papier", "success", 2500)
+                        createNotification("Successfully copied the value, it is in your F8 console or clipboard", "success", 2500)
                     end
                 })
 
-                RageUI.Button("Copier X, Y, Z", nil, {RightLabel = Config_RightLabel}, true, {
+                RageUI.Button("Copy X, Y, Z", nil, {RightLabel = Config_RightLabel}, true, {
                     onSelected = function ()
                         getCoordsPlayer()
                         SendNUIMessage({
@@ -83,11 +81,11 @@ function openMenuCoords()
                             data = "X = "..getCoordsPlayer().x..", Y = "..getCoordsPlayer().y..", Z = "..getCoordsPlayer().z
                         })
                         print("X = "..getCoordsPlayer().x..", Y = "..getCoordsPlayer().y..", Z = "..getCoordsPlayer().z)
-                        createNotification("Vous avez copier avez succes la valeur elle est dans votre console F8 ou dans le presse papier", "success", 2500)
+                        createNotification("Successfully copied the value, it is in your F8 console or clipboard", "success", 2500)
                     end
                 })
 
-                RageUI.Button("Copier X, Y, Z, A", nil, {RightLabel = Config_RightLabel}, true, {
+                RageUI.Button("Copy X, Y, Z, A", nil, {RightLabel = Config_RightLabel}, true, {
                     onSelected = function ()
                         getPlayerHanding()
                         getCoordsPlayer()
@@ -96,13 +94,13 @@ function openMenuCoords()
                             data = "X = "..getCoordsPlayer().x..", Y = "..getCoordsPlayer().y..", Z = "..getCoordsPlayer().z..", A = "..getPlayerHanding()
                         })
                         print("X = "..getCoordsPlayer().x..", Y = "..getCoordsPlayer().y..", Z = "..getCoordsPlayer().z..", A = "..getPlayerHanding())
-                        createNotification("Vous avez copier avez succes la valeur elle est dans votre console F8 ou dans le presse papier", "success", 2500)
+                        createNotification("Successfully copied the value, it is in your F8 console or clipboard", "success", 2500)
                     end
                 })
 
                 RageUI.Line()
 
-                RageUI.Button("Copier le Handing", nil, {RightLabel = Config_RightLabel}, true, {
+                RageUI.Button("Copy Handling", nil, {RightLabel = Config_RightLabel}, true, {
                     onSelected = function ()
                         getPlayerHanding()
                         SendNUIMessage({
@@ -110,7 +108,7 @@ function openMenuCoords()
                             data = "Handling = "..getPlayerHanding()
                         })
                         print("Handling = "..getPlayerHanding())
-                        createNotification("Vous avez copier avez succes la valeur elle est dans votre console F8 ou dans le presse papier", "success", 2500)
+                        createNotification("Successfully copied the value, it is in your F8 console or clipboard", "success", 2500)
                     end
                 })
 
